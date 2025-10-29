@@ -1,4 +1,3 @@
-import { CardFooter } from "../ui/card";
 import { Link } from "react-router-dom";
 import { ExternalLink, Github } from "lucide-react";
 import Title from "../Title/Title";
@@ -91,8 +90,7 @@ const Projects = () => {
   return (
     <>
       <div id="projects" className="py-20 px-10 md:px-20">
-        
-          <Title title="Featured Projects" />
+        <Title title="Featured Projects" />
 
         <motion.div
           className="grid mt-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
@@ -168,7 +166,7 @@ const Projects = () => {
                 ))}
               </motion.div>
 
-              <CardFooter className="py-3 mt-5 w-full flex items-center justify-between">
+              <div className="py-3 mt-5 w-full flex items-center justify-between">
                 <motion.div whileHover={{ scale: 1.05 }} className="flex-1">
                   <Link
                     to={project.github}
@@ -179,10 +177,7 @@ const Projects = () => {
                     <span>Code</span>
                   </Link>
                 </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="flex-1"
-                >
+                <motion.div whileHover={{ scale: 1.05 }} className="flex-1">
                   <Link
                     to={project.live}
                     target="_blank"
@@ -192,7 +187,7 @@ const Projects = () => {
                     <span>Live</span>
                   </Link>
                 </motion.div>
-              </CardFooter>
+              </div>
             </motion.div>
           ))}
         </motion.div>
