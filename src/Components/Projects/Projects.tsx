@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { ExternalLink, Github } from "lucide-react";
 import Title from "../Title/Title";
 import { motion } from "motion/react";
+import EcommercePhoto from "../../assets/ecommerce-photo.png";
+import AwardPhoto from "../../assets/award-photo.png";
+import SocialWebPhoto from "../../assets/social-photo.png";
 
 const Projects = () => {
   const containerVariants = {
@@ -56,7 +59,7 @@ const Projects = () => {
       ],
       github: "https://github.com/Mo-1687/e-commerce.git",
       live: "https://e-commerce-nu-beryl-97.vercel.app",
-      image: "/public/E-commerce photo.png",
+      image: EcommercePhoto,
       color: "from-primary/20 to-accent/20",
     },
     {
@@ -72,7 +75,7 @@ const Projects = () => {
       ],
       github: "https://github.com/Mo-1687/Social-App.git",
       live: "https://social-app-vert-three.vercel.app",
-      image: "/public/social photo.png",
+      image: SocialWebPhoto,
       color: "from-secondary/20 to-primary/20",
     },
     {
@@ -82,7 +85,7 @@ const Projects = () => {
       technologies: ["React", "Vite", "GSAP", "TypeScript", "TailwindCSS"],
       github: "https://github.com/Mo-1687/Award-website.git",
       live: "https://award-website-psi.vercel.app",
-      image: "/public/Award photo.png",
+      image: AwardPhoto,
       color: "from-accent/20 to-secondary/20",
     },
   ];

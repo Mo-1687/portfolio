@@ -4,6 +4,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
+import MohamedPhoto from "../../assets/Mohamed.png";
 
 const Hero = () => {
   const containerVariants = {
@@ -29,7 +30,7 @@ const Hero = () => {
     },
   };
   return (
-    <div id="hero" className="max-w-6xl mx-auto min-h-screen">
+    <div id="hero" className="max-w-6xl py-10 mx-auto min-h-screen">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -119,7 +120,7 @@ const Hero = () => {
 
           <div className="photo w-80 h-80 border-4 border-primary/40 shadow-3xl shadow-primary/20 backdrop-blur-md rounded-full max-w-sm overflow-hidden ">
             <img
-              src="/public/Mohamed.png"
+              src={MohamedPhoto}
               alt="Mohamed Ehab Photo"
               className="w-full object-cover object-top"
             />

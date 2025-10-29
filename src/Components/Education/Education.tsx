@@ -78,7 +78,7 @@ const Education = () => {
       <Title title="Education & Learning" />
 
       <motion.div
-        className="grid grid-cols-1 mt-10 md:grid-cols-2 gap-10 md:gap-20"
+        className="mt-15 grid grid-cols-1  md:grid-cols-2 gap-10 md:gap-20"
         initial="hidden"
         whileInView={"visible"}
         variants={containerVariants}
