@@ -2,7 +2,6 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
-import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import MohamedPhoto from "../../assets/Mohamed.png";
 
@@ -78,7 +77,7 @@ const Hero = () => {
               href="#contact"
               className="text-primary border border-primary font-bold hover:bg-primary/10 px-6 py-3 rounded-2xl flex items-center justify-center gap-2 w-50 h-15 hover:scale-105 transition-transform duration-300"
             >
-              View My Work <ArrowRight />
+              Contact Me <ArrowRight />
             </a>
           </motion.div>
 
@@ -100,13 +99,6 @@ const Hero = () => {
               className="text-primary border border-accent-foreground/10 hover:border-primary hover:scale-105 transition-all duration-300 p-2 rounded-lg"
             >
               <FaLinkedinIn size={25} />
-            </Link>
-            <Link
-              target="_blank"
-              to="https://twitter.com/MohamedEhab"
-              className="text-primary border border-accent-foreground/10 hover:border-primary hover:scale-105 transition-all duration-300 p-2 rounded-lg"
-            >
-              <MdEmail size={25} />
             </Link>
           </motion.div>
         </motion.div>
