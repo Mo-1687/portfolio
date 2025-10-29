@@ -56,7 +56,7 @@ const Projects = () => {
       ],
       github: "https://github.com/Mo-1687/e-commerce.git",
       live: "https://e-commerce-nu-beryl-97.vercel.app",
-      image: "/src/assets/E-commerce photo.png",
+      image: "/public/E-commerce photo.png",
       color: "from-primary/20 to-accent/20",
     },
     {
@@ -72,7 +72,7 @@ const Projects = () => {
       ],
       github: "https://github.com/Mo-1687/Social-App.git",
       live: "https://social-app-vert-three.vercel.app",
-      image: "/src/assets/social photo.png",
+      image: "/public/social photo.png",
       color: "from-secondary/20 to-primary/20",
     },
     {
@@ -82,7 +82,7 @@ const Projects = () => {
       technologies: ["React", "Vite", "GSAP", "TypeScript", "TailwindCSS"],
       github: "https://github.com/Mo-1687/Award-website.git",
       live: "https://award-website-psi.vercel.app",
-      image: "/src/assets/Award photo.png",
+      image: "/public/Award photo.png",
       color: "from-accent/20 to-secondary/20",
     },
   ];

@@ -119,7 +119,7 @@ const Hero = () => {
 
           <div className="photo w-80 h-80 border-4 border-primary/40 shadow-3xl shadow-primary/20 backdrop-blur-md rounded-full max-w-sm overflow-hidden ">
             <img
-              src="/src/assets/Mohamed.png"
+              src="/public/Mohamed.png"
               alt="Mohamed Ehab Photo"
               className="w-full object-cover object-top"
             />
