@@ -1,8 +1,6 @@
-import React from "react";
 import Title from "../Title/Title";
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import { stagger } from "motion";
 import { motion } from "motion/react";
 
 const Contact = () => {

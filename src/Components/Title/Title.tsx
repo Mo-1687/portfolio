@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import React from "react";
 
 const Title = ({ title }: { title: string }) => {
   const firstWord = title.split(" ")[0];
