@@ -3,7 +3,8 @@ import { BiMenu, BiX } from "react-icons/bi";
 
 const Navbar = () => {
   const navItems = ["about", "projects", "skills", "contact"];
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleNavbarToggle = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setIsOpen((prev) => !prev);

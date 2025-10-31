@@ -121,7 +121,7 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <motion.div className="p-6 space-y-4">
+              <motion.div className="p-5 space-y-4">
                 <motion.h3
                   className="space-y-2  text-accent-foreground font-bold text-xl group-hover:text-primary transition-colors duration-300"
                   initial={{ opacity: 0, x: -20 }}
@@ -132,7 +132,7 @@ const Projects = () => {
                   {project.title}
                 </motion.h3>
                 <motion.p
-                  className="h-15 text-accent-foreground/70 leading-relaxed font-light text-sm"
+                  className="h-15  text-accent-foreground/70 leading-relaxed font-light text-sm"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: index * 0.2 + 0.5, duration: 0.5 }}
@@ -144,7 +144,7 @@ const Projects = () => {
 
               {/* Tags */}
               <motion.div
-                className="mt-4 h-12 flex flex-wrap gap-2 items-center px-5"
+                className=" h-12 mt-10 mb-12 sm:my-0 md:my-5  flex flex-wrap gap-2 items-center px-5"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false }}

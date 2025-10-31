@@ -6,7 +6,7 @@ const Title = ({ title }: { title: string }) => {
 
   return (
     <motion.div
-      className="title "
+      className="title text-3xl md:text-5xl p-2 "
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}

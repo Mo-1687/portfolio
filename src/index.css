@@ -312,7 +312,6 @@
 
 .title {
   position: relative;
-  font-size: 3rem;
   font-weight: 700;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -329,7 +328,7 @@
   height: 3px;
   background: var(--gradient-primary);
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
   left: 50%;
   transform: translateX(-50%);
 }

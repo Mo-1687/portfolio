@@ -47,17 +47,17 @@ const Hero = () => {
             className=" text-5xl md:text-7xl font-bold text-accent-foreground "
             variants={itemVariants}
           >
-            Hi, I'm{" "}
+            Hi, I'm
           </motion.h1>
           <motion.h1
-            className="text-5xl md:text-7xl py-2 font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+            className="text-4xl  md:text-7xl py-2 font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
             variants={itemVariants}
           >
-            Mohamed Ehab{" "}
+            Mohamed Ehab
           </motion.h1>
 
           <motion.p
-            className="text-accent-foreground/50 max-w-xl text-2xl"
+            className="text-accent-foreground/50 max-w-xl text-xl md:text-2xl"
             variants={itemVariants}
           >
             Frontend Developer crafting modern, responsive web experiences with
@@ -69,13 +69,13 @@ const Hero = () => {
           <motion.div className="mt-6 flex gap-4" variants={itemVariants}>
             <a
               href="#projects"
-              className="text-accent-foreground bg-gradient-to-r from-primary to-accent flex items-center justify-center gap-2 w-50 h-15 rounded-2xl font-bold hover:scale-105 transition-transform duration-300"
+              className="text-accent-foreground bg-gradient-to-r from-primary to-accent flex items-center justify-center gap-2 w-50 h-15 text-sm md:text-base rounded-2xl font-bold hover:scale-105 transition-transform duration-300"
             >
               View My Work <ArrowRight />
             </a>
             <a
               href="#contact"
-              className="text-primary border border-primary font-bold hover:bg-primary/10 px-6 py-3 rounded-2xl flex items-center justify-center gap-2 w-50 h-15 hover:scale-105 transition-transform duration-300"
+              className="text-primary border border-primary font-bold hover:bg-primary/10 px-6 py-3 rounded-2xl flex items-center justify-center gap-2 w-50 h-15 text-sm md:text-base hover:scale-105 transition-transform duration-300"
             >
               Contact Me <ArrowRight />
             </a>

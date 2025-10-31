@@ -64,7 +64,7 @@ const About = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView={"visible"}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, }}
       >
         {/* Skills  */}
         <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-12 md:mt-16">
@@ -94,7 +94,7 @@ const About = () => {
                 <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm md:text-base text-muted-foreground">
+                <p className="text-xs md:text-base text-muted-foreground">
                   {item.description}
                 </p>
               </div>

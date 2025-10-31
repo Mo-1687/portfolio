@@ -26,14 +26,13 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "mohamed.ehab.dev@gmail.com",
-      href: "mailto:mohamed.ehab.dev@gmail.com",
+      value: "mohammed.ehab.dev@gmail.com",
+      href: "https://mail.google.com/mail/?view=cm&to=mohammed.ehab.dev@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
       value: "+20 1094304008",
-      href: "tel:+201094304008",
     },
     {
       icon: MapPin,
@@ -59,22 +58,21 @@ const Contact = () => {
 
   return (
     <div id="contact" className="container mx-auto max-w-6xl py-20 px-5">
-      
-        <Title title="Get In Touch " />
+      <Title title="Get In Touch " />
 
       <motion.div
         className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-15"
         initial="hidden"
         whileInView={"visible"}
         variants={containerVariants}
-        viewport={{once: false}}
+        viewport={{ once: false }}
       >
         {/* Contact Information  */}
         <motion.div variants={itemVariants} className="flex flex-col gap-5 ">
           <h2 className="font-bold text-3xl">Contact Information </h2>
           {contactInfo.map((info, index) => (
             <div
-              className="flex gap-5 bg-card/60 shadow-md p-6 rounded-lg border border-border hover:border-primary hover:scale-105 transition-all duration-300"
+              className="flex gap-4 bg-card/60   shadow-md p-6  rounded-lg border border-border hover:border-primary hover:scale-105 transition-all duration-300"
               key={index}
             >
               <info.icon
@@ -86,13 +84,14 @@ const Contact = () => {
                   {info.label}
                 </h3>
                 {info.href ? (
-                  <Link
-                    className="font-bold text-lg hover:text-primary transition-colors duration-100 "
-                    to={info.href}
+                  <a
+                    className="font-bold text-sm md:text-lg hover:text-primary transition-colors duration-100 "
+                    href={info.href}
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {info.value}
-                  </Link>
+                  </a>
                 ) : (
                   <span>{info.value}</span>
                 )}
@@ -106,7 +105,7 @@ const Contact = () => {
           <h2 className="font-bold text-3xl">Connect With Me </h2>
           {socialLinks.map((info, index) => (
             <div
-              className="flex items-center justify-between group  bg-card/60 shadow-md p-6 rounded-lg border border-border hover:border-[#9F59F7] hover:scale-105 transition-all duration-300"
+              className="flex items-center justify-between group  bg-card/60 shadow-md p-6 rounded-lg border border-border hover:border-[#9F59F7]  hover:scale-105 transition-all duration-300"
               key={index}
             >
               <div className="flex gap-5">
@@ -118,19 +117,21 @@ const Contact = () => {
                   <h3 className="font-semibold mb-1 text-accent-foreground/50">
                     {info.label}
                   </h3>
-                  <Link
+                  <a
                     className="font-bold text-lg hover:text-[#9F59F7] transition-colors duration-100 "
-                    to={info.href}
+                    href={info.href}
+                    rel="noopener noreferrer"
                     target="_blank"
                   >
                     {info.username}
-                  </Link>
+                  </a>
                 </div>
               </div>
 
               <Link
                 to={info.href}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="border border-border/50 hover:border-[#9F59F7] transition-colors divide-fuchsia-300 rounded-lg px-3 py-2 text-sm opacity-0 group-hover:opacity-100 duration-300 font-medium  hover:text-[#9F59F7] "
               >
                 Visit
@@ -138,14 +139,15 @@ const Contact = () => {
             </div>
           ))}
 
-          <Link
-            to={contactInfo[0].href || "mailto:mohamed.ehab.dev@gmail.com"}
+          <a
+            href={contactInfo[0].href || "mailto:mohammed.ehab.dev@gmail.com"}
             className="flex items-center justify-center gap-5 bg-gradient-to-r from-primary to-accent rounded-lg hover:scale-105 transition-transform duration-300 text-white font-bold px-6 py-2 mt-5"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <Mail size={30} />
             Send Me an Email
-          </Link>
+          </a>
         </motion.div>
       </motion.div>
     </div>

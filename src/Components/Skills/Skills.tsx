@@ -104,7 +104,7 @@ const Skills = () => {
   ];
 
   return (
-    <div id="skills" className="py-20 px-10 md:px-20">
+    <div id="skills" className="py-20 px-5 md:px-20">
       
         <Title title="Skills & Expertise" />
 
@@ -113,7 +113,7 @@ const Skills = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.15 }}
+        viewport={{ once: false }}
       >
         {skillCategories.map((category, categoryIndex) => (
           <motion.div
@@ -157,7 +157,7 @@ const Skills = () => {
                 <motion.span
                   key={skill}
                   variants={skillVariants}
-                  className="border border-primary/30 py-2 px-3 cursor-pointer text-accent-foreground rounded-2xl bg-background/50 backdrop-blur-sm hover:bg-primary/10 hover:border-primary hover:text-primary transition-all duration-300"
+                  className="border border-primary/30 text-xs md:text-sm py-2 px-3 cursor-pointer text-accent-foreground rounded-2xl bg-background/50 backdrop-blur-sm hover:bg-primary/10 hover:border-primary hover:text-primary transition-all duration-300"
                   whileHover={{
                     scale: 1.05,
                     y: -4,
