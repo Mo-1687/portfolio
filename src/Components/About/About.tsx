@@ -1,25 +1,9 @@
 import { Code2, Rocket, Sparkles } from "lucide-react";
 import Title from "../Title/Title";
 import { easeInOut, motion } from "motion/react";
+import { variants } from "../../lib/animations";
 
 const About = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { duration: 0.6, staggerChildren: 0.2, delayChildren: 0.3 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.3, ease: "easeOut" as any },
-    },
-  };
-
   const highlights: { icon: any; title: string; description: string }[] = [
     {
       icon: Code2,
@@ -47,10 +31,10 @@ const About = () => {
         {/* Introduction Text  */}
       <motion.div
         className="text-lg my-10 text-accent-foreground/80 text-center max-w-3xl  mx-auto"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-        viewport={{once: false}}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{once: true}}
+        variants={variants.fadeUp}
       >
         Motivated Frontend Developer with hands-on experience building modern,
         responsive web applications. I specialize in creating intuitive user
@@ -61,18 +45,18 @@ const About = () => {
       </motion.div>
 
       <motion.div
-        variants={containerVariants}
+        variants={variants.staggerContainer}
         initial="hidden"
         whileInView={"visible"}
-        viewport={{ once: false, }}
+        viewport={{ once: true }}
       >
         {/* Skills  */}
         <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-12 md:mt-16">
           {highlights.map((item) => (
             <motion.div
               key={item.title}
-              className="relative group"
-              variants={itemVariants}
+              className="relative group h-full"
+              variants={variants.fadeUp}
               whileHover={{
                 y: -8,
                 transition: { duration: 0.2, ease: easeInOut },

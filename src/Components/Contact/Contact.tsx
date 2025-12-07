@@ -2,26 +2,9 @@ import Title from "../Title/Title";
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
+import { variants } from "../../lib/animations";
 
 const Contact = () => {
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, staggerChildren: 0.2, delayChildren: 0.3 },
-    },
-  };
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.5 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.4, ease: "easeOut" as any },
-    },
-  };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -64,11 +47,11 @@ const Contact = () => {
         className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-15"
         initial="hidden"
         whileInView={"visible"}
-        variants={containerVariants}
-        viewport={{ once: false }}
+        variants={variants.staggerContainer}
+        viewport={{ once: true }}
       >
         {/* Contact Information  */}
-        <motion.div variants={itemVariants} className="flex flex-col gap-5 ">
+        <motion.div variants={variants.fadeUp} className="flex flex-col gap-5 ">
           <h2 className="font-bold text-3xl">Contact Information </h2>
           {contactInfo.map((info, index) => (
             <div
@@ -101,7 +84,7 @@ const Contact = () => {
         </motion.div>
 
         {/* Social Links  */}
-        <motion.div variants={itemVariants} className="flex flex-col gap-5 ">
+        <motion.div variants={variants.fadeUp} className="flex flex-col gap-5 ">
           <h2 className="font-bold text-3xl">Connect With Me </h2>
           {socialLinks.map((info, index) => (
             <div

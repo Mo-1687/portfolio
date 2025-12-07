@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { variants } from "../../lib/animations";
 
 const Title = ({ title }: { title: string }) => {
   const firstWord = title.split(" ")[0];
@@ -7,9 +8,10 @@ const Title = ({ title }: { title: string }) => {
   return (
     <motion.div
       className="title text-3xl md:text-5xl p-2 "
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={variants.fadeUp}
     >
       {firstWord} <span>{remainingWords}</span>
     </motion.div>

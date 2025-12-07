@@ -5,45 +5,10 @@ import { motion } from "motion/react";
 import EcommercePhoto from "../../assets/ecommerce-photo.png";
 import AwardPhoto from "../../assets/award-photo.png";
 import SocialWebPhoto from "../../assets/social-photo.png";
+import DentalCarePhoto from "../../assets/dental-care.png";
+import { variants } from "../../lib/animations";
 
 const Projects = () => {
-  const containerVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        staggerChildren: 0.2,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const projectVariants = {
-    hidden: { opacity: 0, x: -50, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut" as any,
-      },
-    },
-  };
-
-  const tagVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.3,
-      },
-    },
-  };
-
   const projects = [
     {
       title: "E-Commerce Platform",
@@ -88,6 +53,25 @@ const Projects = () => {
       image: AwardPhoto,
       color: "from-accent/20 to-secondary/20",
     },
+    {
+      title: "Dental Care Platform",
+      description:
+        "Full-stack medical appointment system featuring AI voice scheduling, real-time booking management, admin dashboards, and automated email notifications.",
+      technologies: [
+        "Next.js 16",
+        "TypeScript",
+        "TailwindCSS",
+        "Prisma",
+        "Resend",
+        "Clerk",
+        "Vapi AI",
+        "Radix UI",
+      ],
+      github: "https://github.com/Mo-1687/dental-care",
+      live: "https://dental-care-xo28.vercel.app/",
+      image: DentalCarePhoto,
+      color: "from-sky-500/20 to-blue-600/20",
+    },
   ];
 
   return (
@@ -97,16 +81,16 @@ const Projects = () => {
 
         <motion.div
           className="grid mt-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
-          variants={containerVariants}
+          variants={variants.staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.title}
               className="group relative bg-card/40 backdrop-blur-md border border-border/50 rounded-xl overflow-hidden"
-              variants={projectVariants}
+              variants={variants.fadeUp}
             >
               {/* Image */}
               <div className="relative h-56 overflow-hidden bg-background">
@@ -124,19 +108,19 @@ const Projects = () => {
               <motion.div className="p-5 space-y-4">
                 <motion.h3
                   className="space-y-2  text-accent-foreground font-bold text-xl group-hover:text-primary transition-colors duration-300"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.2 + 0.4, duration: 0.5 }}
-                  viewport={{ once: false }}
+                  initial="hidden"
+                  whileInView="visible"
+                  variants={variants.fadeLeft}
+                  viewport={{ once: true }}
                 >
                   {project.title}
                 </motion.h3>
                 <motion.p
                   className="h-15  text-accent-foreground/70 leading-relaxed font-light text-sm"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ delay: index * 0.2 + 0.5, duration: 0.5 }}
-                  viewport={{ once: false }}
+                  initial="hidden"
+                  whileInView="visible"
+                  variants={variants.fadeUp}
+                  viewport={{ once: true }}
                 >
                   {project.description}
                 </motion.p>
@@ -144,19 +128,16 @@ const Projects = () => {
 
               {/* Tags */}
               <motion.div
-                className=" h-12 mt-10 mb-12 sm:my-0 md:my-5  flex flex-wrap gap-2 items-center px-5"
+                className="  mt-10 mb-12 sm:my-0 md:my-5  flex flex-wrap gap-2 items-center px-5"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false }}
-                transition={{
-                  staggerChildren: 0.08,
-                  delayChildren: index * 0.2 + 0.6,
-                }}
+                viewport={{ once: true }}
+                variants={variants.staggerContainer}
               >
                 {project.technologies.map((tech) => (
                   <motion.span
                     key={tech}
-                    variants={tagVariants}
+                    variants={variants.scaleIn}
                     className="text-xs  px-3 py-1.5 bg-primary/15 text-primary rounded-full border border-primary/30 hover:bg-primary/25 transition-all duration-300 font-medium"
                     whileHover={{
                       scale: 1.1,

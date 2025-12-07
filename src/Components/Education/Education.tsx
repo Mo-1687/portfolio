@@ -1,31 +1,9 @@
 import Title from "../Title/Title";
 import { Award, BookOpen, GraduationCap } from "lucide-react";
 import { motion } from "motion/react";
+import { variants } from "../../lib/animations";
 
 const Education = () => {
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        staggerChildren: 0.2,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.5 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.4 },
-    },
-  };
-
   const education = [
     {
       icon: GraduationCap,
@@ -81,10 +59,11 @@ const Education = () => {
         className="mt-15 grid grid-cols-1  md:grid-cols-2 gap-10 md:gap-20"
         initial="hidden"
         whileInView={"visible"}
-        variants={containerVariants}
+        variants={variants.staggerContainer}
+        viewport={{ once: true }}
       >
         {/* Education  */}
-        <motion.div variants={itemVariants}>
+        <motion.div variants={variants.fadeUp}>
           <h2 className="font-bold text-2xl flex items-center gap-3">
             <GraduationCap size={30} className="text-primary" />
             Education
@@ -113,7 +92,7 @@ const Education = () => {
           ))}
         </motion.div>
         {/* Certificate */}
-        <motion.div variants={itemVariants}>
+        <motion.div variants={variants.fadeUp}>
           <h2 className="font-bold text-2xl flex items-center gap-3">
             <Award size={30} className="text-accent" />
             Certificate
@@ -148,13 +127,14 @@ const Education = () => {
         <motion.div
           initial="hidden"
           whileInView={"visible"}
-          variants={containerVariants}
+          variants={variants.staggerContainer}
+          viewport={{ once: true }}
           className=" grid grid-cols-1 mt-5 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {courses.map((course, index) => (
             <motion.div
               key={index}
-              variants={itemVariants}
+              variants={variants.scaleIn}
               className="bg-[#0A0E17] group hover:scale-105 transition-transform duration-300 backdrop-blur-md p-4 rounded-lg"
             >
               {/* Icon  */}
