@@ -75,7 +75,7 @@ const Hero = () => {
             </Link>
             <Link
               target="_blank"
-              to="https://www.linkedin.com/in/mohamed-ehab/"
+              to="https://www.linkedin.com/in/mohamed-ehab-a3b03b31a"
               className="text-primary border border-accent-foreground/10 hover:border-primary hover:scale-105 transition-all duration-300 p-2 rounded-lg"
             >
               <FaLinkedinIn size={25} />

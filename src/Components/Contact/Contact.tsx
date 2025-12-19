@@ -20,7 +20,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Minya, Egypt",
+      value: "Cairo, Egypt",
     },
   ];
 
