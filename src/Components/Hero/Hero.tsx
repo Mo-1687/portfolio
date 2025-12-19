@@ -68,7 +68,7 @@ const Hero = () => {
           >
             <Link
               target="_blank"
-              to="https://github.com/MohamedEhab"
+              to="https://github.com/Mo-1687?tab=repositories"
               className="text-primary border border-accent-foreground/10 hover:border-primary hover:scale-105 transition-all duration-300 p-2 rounded-lg"
             >
               <FiGithub size={25} />
